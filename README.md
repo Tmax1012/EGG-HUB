@@ -1,18 +1,27 @@
-# EGG-HUB
+# EGG-HUB V3 — Intelligence Suite
 
-Prototype de navigateur de serveurs publics pour Steal An Egg.
+## Inclus
+- Dashboard : session et nombre de joueurs du serveur actuel.
+- Spawn Predictor : compte à rebours ancré manuellement sur un reset observé. La référence de 300 secondes vient d'un échantillon communautaire de cinq intervalles (293, 300, 300, 300, 307 s), en contexte Admin Abuse / update ; ce n'est pas un calendrier universel.
+- Public Server Radar : liste les serveurs publics renvoyés par l'API Roblox, triés par places libres, et permet une tentative de téléportation.
+- Fusion Intelligence : calcul manuel sur les valeurs saisies.
+- Research Database : 13 groupes et 106 slots d'index observés. Les silhouettes ne prouvent pas les noms, raretés ni revenus.
+- Personal Value Notebook : notes de valeur pendant la session.
+- Interface tactile déplaçable.
 
-## Contenu
-- `main.lua` : interface mobile et liste les serveurs publics du jeu Roblox actuellement ouvert.
-- `loader.lua` : charge `main.lua` depuis ce dépôt GitHub.
-- `README.md` : documentation.
+## Limites importantes
+Aucune lecture d'inventaires cachés, aucun vol automatisé, aucun remote non documenté, aucun contournement anti-cheat. Le radar public ne montre que le nombre de joueurs, la capacité et le ping lorsqu'ils sont fournis. Les calculs sont des estimations.
 
-## Limite importante
-L'API publique Roblox permet de lister les serveurs publics, leur identifiant et leur nombre de joueurs. Elle ne donne pas l'inventaire des œufs de chaque serveur. Le Finder d'œufs (top 5, mutations, rendement, date de découverte) reste donc désactivé tant qu'une source de données réelle n'est pas disponible. Aucun résultat n'est simulé.
+## Sources
+- https://github.com/terrencerun/steal-an-egg-research
+- https://stealaneggwiki.com/research/spawn-observations
+- https://stealaneggwiki.com/all-eggs
+- Roblox Place ID: 107778070777162
+- Roblox Universe ID: 10563114921
 
 ## Installation
-1. Ouvrir le jeu Roblox.
-2. Charger le script dans un environnement de test autorisé.
-3. Pour utiliser le chargeur, le dépôt doit contenir `main.lua` sur la branche `main`.
+Remplace `main.lua` à la racine de `Tmax1012/EGG-HUB` par le fichier de ce pack. Conserve `loader.lua`.
+Loader à une ligne :
+`loadstring(game:HttpGet("https://raw.githubusercontent.com/Tmax1012/EGG-HUB/main/main.lua"))()`
 
-Les exécuteurs tiers peuvent enfreindre les règles de Roblox et exposer le compte à des sanctions. Ne partage jamais ton mot de passe ou ton cookie Roblox.
+Les exécuteurs tiers peuvent présenter des risques pour le compte et la sécurité.
